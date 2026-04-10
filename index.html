@@ -22,6 +22,10 @@
       baseLayerPicker: false,
     });
 
+    // Google Photorealistic 3D Tiles (지형+위성)
+    const googleTiles = await Cesium.Cesium3DTileset.fromIonAssetId(2275207);
+    viewer.scene.primitives.add(googleTiles);
+
     // 처음부터 성 위치로 카메라 고정
     viewer.camera.setView({
       destination: Cesium.Cartesian3.fromDegrees(24.934, 54.649, 600),
