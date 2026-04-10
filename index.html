@@ -41,7 +41,7 @@
         await Cesium.Cesium3DTileset.fromIonAssetId(4614022)
       );
 
-      const heightOffset = 120;
+      const heightOffset = 125;
       const boundingSphere = tileset.boundingSphere;
       const cartographic = Cesium.Cartographic.fromCartesian(boundingSphere.center);
       const surface = Cesium.Cartesian3.fromRadians(cartographic.longitude, cartographic.latitude, 0.0);
