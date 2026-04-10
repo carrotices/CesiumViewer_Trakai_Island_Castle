@@ -17,14 +17,12 @@
     Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZWI0YzAzNy1kOWExLTRiMzQtOTdmYi1iZmY0YmIwMDgxMTUiLCJpZCI6NDE2MTkyLCJpYXQiOjE3NzU3ODc2Njd9.mwp3vPC8jAxcmtbufDsYEFOTsfS9PMqD0cjNNyUeKKg";
 
     const viewer = new Cesium.Viewer("cesiumContainer", {
-      terrain: Cesium.Terrain.fromWorldTerrain(),
-      // 불필요한 UI 제거로 가볍게
       timeline: false,
       animation: false,
       baseLayerPicker: false,
     });
 
-    // 처음부터 성 위치로 카메라 고정 → 불필요한 타일 로드 안 함
+    // 처음부터 성 위치로 카메라 고정
     viewer.camera.setView({
       destination: Cesium.Cartesian3.fromDegrees(24.934, 54.649, 600),
       orientation: {
